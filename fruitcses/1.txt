@@ -1,0 +1,90 @@
+<html>
+
+
+<body>
+<center><img src =wi.jpg>
+<center><form>
+<br><br>
+
+<table>
+ <tr>
+    <td> <img src = "apple.jpg" ></td> 
+	<td> <img src = "Grapes.jpg" > </td>
+	<td> <img src = "kiwi.jpg"> </td>
+	<td> <img src = "mango.jpg"> </td>
+  </tr>
+  <tr align = "center">
+<td><input type="checkbox" id="smallbra1" name="small" >small </td>
+<td><input type="checkbox" id="smallbra2">small</td>
+<td><input type="checkbox" id="smallbra3">small</td>
+<td><input type="checkbox" id="smallbra4">small</td>
+</tr>
+<tr align = "center">
+<td><input type="checkbox" id="bra1">Add to Cart</td>
+<td><input type="checkbox" id="bra2">Add to Cart</td>
+<td><input type="checkbox" id="bra3">Add to Cart</td>
+<td><input type="checkbox" id="bra4">Add to Cart</td>
+</tr>
+<tr align = "center">
+<p id="demo"></p>
+<td><input type="button" id="click" value="Buy" onClick="pabili()"></td>
+<td><input type="reset" value="clear history"></td>
+
+</tr>
+</table>
+</form>
+
+
+
+
+<script>
+function pabili(){
+var n1,n2,n3,n4,n5;
+var total1=0,total2=0,total3=0,total4=0,total5=0;
+
+
+var name= prompt('pangalan mo?','name');
+var contact= prompt('number mo?','09');
+var add= prompt('san bahay mo?','sampaloc');
+
+if(bra1.checked==true)
+{
+n1 = prompt('Enter the Quantity','0');
+total1=parseInt(n1)*10;
+
+}
+if(bra2.checked==true)
+{
+n2 = prompt('Enter the Quantity','0');
+total2=parseInt(n2)*20;
+}
+if(bra3.checked==true)
+{
+n3 = prompt('Enter the Quantity','0');
+total3=parseInt(n3)*10;
+}
+if(bra4.checked==true)
+{
+n4 = prompt('Enter the Quantity','0');
+total4=parseInt(n4)*12;
+}
+
+var all = total1+total2+total3+total4+total5;
+alert('Huy ' +name+  ' Magbayad ka ng '+parseInt(all)+ ' puntahan kita sa ' +add);
+
+var bayad = prompt(' nakatangap ako ng' ,'0')
+var sukli = parseInt(bayad)-all;
+
+document.write ('<center>RESIBO'); 
+document.write ('<center>Name: ' +name); 
+document.write ('<br><center>Contact number: ' +contact);
+document.write ('<br><center>Address: ' +add);
+document.write ('<br><center>Total: ' +all);
+document.write ('<br><center>Amount receive: PHP' +bayad);
+document.write ('<br><center>Change: PHP' +sukli);
+}
+</script>
+
+
+</body>
+</html>
